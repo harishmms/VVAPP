@@ -1,0 +1,909 @@
+<section class="padding-conson">
+  <section>
+    <div class="container-fluid">
+      <div class="row back-icon">
+        <div class="col-12 d-flex">
+          <a [routerLink]="['/Home']" class="d-flex align-items-center w-100">
+            <i class="fas fa-chevron-left"></i>
+            <p class="pl-2 pt-3">At-Home Lab Test</p>
+          </a>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-12">
+          <h6 class="mb-2">Lab Test & Health Checks</h6>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card card-top-offer">
+            <a [routerLink]="['/sublab']">
+              <div class="row">
+                <div class="col-2 offer-new">
+                  <h5>NEW</h5>
+                </div>
+                <div class="col-6 healthy-of">
+                  <div class="d-flex">
+                    <h6>Healthy <span>New Year Package</span></h6>
+                  </div>
+
+                  <p>Includes Thyroid,Vitamin B12,Vitamin D</p>
+                  <p>+80 more tests</p>
+                </div>
+                <div class="col-4 col-ro">
+                  <p>&#8377; 1299</p>
+                  <button class="button-offp">60% Off</button>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h4 class="mt-2 pt-4 mb-2">Popular Health Checkup Packages</h4>
+        </div>
+        <div class="col-md-12">
+          <div class="card-speci d-flex flex-wrap">
+            <div class="card card-s" *ngFor="let Healtpacks of Healtpacks" (click)="healthpackbyid(Healtpacks.checkuppack_id)">
+              <!-- <a [routerLink]="['/sublab']" class="a-h"> -->
+
+                <!-- checkuppack_category: "7"
+checkuppack_createddate: "2022-02-25 00:00:00"
+checkuppack_eligibleage: "15-25"
+checkuppack_finalamount: "7600"
+checkuppack_id: "3"
+checkuppack_name: "Pregnancy checkup"
+checkuppack_offer: "5"
+checkuppack_status: "1"
+checkuppack_totalamount: "8000"
+description: ""
+include_tests: "0"
+include_tests_des: "" -->
+                <div>
+                  <img src="{{ Healtpacks.himage }}" alt="" />
+                </div>
+                <div class="mt-2">
+                  <h6>{{ Healtpacks.checkuppack_name }}</h6>
+                  <p>{{ Healtpacks.description }}</p>
+                  <p>Age: {{ Healtpacks.checkuppack_eligibleage }}</p>
+                  <div class="d-flex w-100 pt-2">
+                    <h6>&#8377; {{ Healtpacks.checkuppack_finalamount }}</h6> 
+                    <span class="discount-offerp">Upto 25% OFF</span>
+                  </div>
+                </div>
+              <!-- </a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <h4>Frequently Booked Tests</h4>
+          </div>
+          <!-- <div class="frequently-booked owl-carousel owl-theme">
+            <div class="item">
+              <div class="card card-img-a pt-2 pb-2">
+                <div>
+                  <a [routerLink]="['/labfrequently']">
+                    <img
+                      src="https://img.icons8.com/external-flat-02-chattapat-/64/000000/external-lab-back-to-school-flat-02-chattapat-.png"
+                    />
+                  </a>
+                </div>
+                <a [routerLink]="['/labfrequently']">Liver Test</a>
+              </div>
+              <div class="card card-img-a pt-2 pb-2">
+                <a [routerLink]="['/labfrequently']">
+                  <div>
+                    <img
+                      src="https://img.icons8.com/external-flat-02-chattapat-/64/000000/external-lab-back-to-school-flat-02-chattapat-.png"
+                    />
+                  </div>
+                  <a [routerLink]="['/labfrequently']">Diabetes Test</a>
+                </a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card card-img-a pt-2 pb-2">
+                <a [routerLink]="['/labfrequently']">
+                  <div>
+                    <img
+                      src="https://img.icons8.com/external-flat-02-chattapat-/64/000000/external-lab-back-to-school-flat-02-chattapat-.png"
+                    />>
+                  </div>
+                  <a [routerLink]="['/labfrequently']">Thyroid Test</a>
+                </a>
+              </div>
+              <div class="card card-img-a pt-2 pb-2">
+                <a href="home-main-doctor1.php">
+                  <a [routerLink]="['/labfrequently']"></a>
+                  <div>
+                    <img
+                      src="https://img.icons8.com/external-flat-02-chattapat-/64/000000/external-lab-back-to-school-flat-02-chattapat-.png"
+                    />
+                  </div>
+                  <a [routerLink]="['/labfrequently']">Lipid Profile</a>
+                </a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card card-img-a pt-2 pb-2">
+                <a [routerLink]="['/labfrequently']">
+                  <div>
+                    <img
+                      src="https://img.icons8.com/external-flat-02-chattapat-/64/000000/external-lab-back-to-school-flat-02-chattapat-.png"
+                    />
+                  </div>
+                  <a [routerLink]="['/labfrequently']">Vitamin D Test</a>
+                </a>
+              </div>
+              <div class="card card-img-a pt-2 pb-2">
+                <a [routerLink]="['/labfrequently']">
+                  <div>
+                    <img
+                      src="https://img.icons8.com/external-flat-02-chattapat-/64/000000/external-lab-back-to-school-flat-02-chattapat-.png"
+                    />
+                  </div>
+                  <a [routerLink]="['/labfrequently']">COVID19 RT_PRC Test</a>
+                </a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card card-img-a pt-2 pb-2">
+                <a [routerLink]="['/labfrequently']">
+                  <a [routerLink]="['/labfrequently']"></a>
+                  <div>
+                    <img
+                      src="https://img.icons8.com/external-flat-02-chattapat-/64/000000/external-lab-back-to-school-flat-02-chattapat-.png"
+                    />
+                  </div>
+                  <a [routerLink]="['/labfrequently']">PCOD Test</a>
+                </a>
+              </div>
+              <div class="card card-img-a pt-2 pb-2">
+                <a [routerLink]="['/labfrequently']">
+                  <div>
+                    <img src="assets/imagescopy/vitamin-c (1).png"
+                      alt="" />
+                  </div>
+                </a>
+                <a [routerLink]="['/labfrequently']">Vitamin B12 Test</a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card card-img-a pt-2 pb-2">
+                <div>
+                  <a [routerLink]="['/labfrequently']">
+                    <img src="assets/imagescopy//liver.png"
+                      alt=""/>
+                  </a>
+                </div>
+                <a [routerLink]="['/labfrequently']">Liver Test</a>
+              </div>
+              <div class="card card-img-a pt-2 pb-2">
+                <a [routerLink]="['/labfrequently']">
+                  <div>
+                    <img
+                      src="assets/imagescopy//diabetes (1).png"
+                      alt=""
+                    />
+                  </div>
+                </a>
+                <a [routerLink]="['/labfrequently']">Diabetes Test</a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card card-img-a pt-2 pb-2">
+                <a [routerLink]="['/labfrequently']">
+                  <div>
+                    <img
+                      src="assets/imagescopy//endocrine.png"
+                      alt=""
+                    />
+                  </div>
+                </a>
+                <a [routerLink]="['/labfrequently']">Thyroid Test</a>
+              </div>
+              <div class="card card-img-a pt-2 pb-2">
+                <a href="home-main-doctor1.php">
+                  <a [routerLink]="['/labfrequently']"></a>
+                  <div>
+                    <img
+                      src="assets/imagescopy//heart (1).png"
+                      alt=""
+                    />
+                  </div>
+                  <a [routerLink]="['/labfrequently']">Lipid Profile</a>
+                </a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card card-img-a pt-2 pb-2">
+                <a [routerLink]="['/labfrequently']">
+                  <div>
+                    <img
+                      src="assets/imagescopy//diabetes (1).png"
+                      alt=""
+                    />
+                  </div>
+                </a>
+                <a [routerLink]="['/labfrequently']">Diabetes Test</a>
+              </div>
+              <div class="card card-img-a pt-2 pb-2">
+                <a [routerLink]="['/labfrequently']">
+                  <div>
+                    <img src="assets/imagescopy//box.png" alt="" />
+                  </div>
+                </a>
+                <a [routerLink]="['/labfrequently']">Others</a>
+              </div>
+            </div>
+
+          
+          </div> -->
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 mt-2">
+            <h5>Featured Tests</h5>
+            <div class="d-flex justify-content-between button-pc">
+              <p>Upto %50% Off</p>
+            </div>
+          </div>
+          <div class="col-6 padding-offer-le mt-2 mb-2">
+            <a [routerLink]="['/sublab']">
+              <div class="card card-offer-tast">
+                <p>72+ TESTS</p>
+                <h6>
+                  Vital body check <i class="fas fa-chevron-right pl-2"></i>
+                </h6>
+                <button>799 <del>2499</del></button>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 padding-offer-le mt-2 mb-2">
+            <a [routerLink]="['/sublab']">
+              <div class="card test-color card-offer-tast">
+                <p>72+ TESTS</p>
+                <h6>
+                  Vital body check <i class="fas fa-chevron-right pl-2"></i>
+                </h6>
+                <button>799 <del>2499</del></button>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 padding-offer-le mt-2 mb-2">
+            <a [routerLink]="['/sublab']">
+              <div class="card test-color card-offer-tast">
+                <p>72+ TESTS</p>
+                <h6>
+                  Vital body check <i class="fas fa-chevron-right pl-2"></i>
+                </h6>
+                <button>799 <del>2499</del></button>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 padding-offer-le mt-2 mb-2">
+            <a [routerLink]="['/sublab']">
+              <div class="card card-offer-tast">
+                <p>72+ TESTS</p>
+                <h6>
+                  Vital body check <i class="fas fa-chevron-right pl-2"></i>
+                </h6>
+                <button>799 <del>2499</del></button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12 col-padding-tp mt-4 mb-2">
+            <h4>Condition Based Tests</h4>
+            <div class="d-flex justify-content-between"></div>
+
+            <div>
+              <div class="condition-based-test owl-carousel owl-theme">
+                <div class="item">
+                  <div class="card card-img-a pt-2 pb-2">
+                    <div>
+                      <a href="home-main-doctor1.php">
+                        <img
+                          src="assets/imagescopy//coronavirus (1).png"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <a href="home-main-doctor1.php">COVID-19</a>
+                  </div>
+                  <div class="card card-img-a pt-2 pb-2">
+                    <a href="home-main-doctor1.php">
+                      <div>
+                        <img
+                          src="assets/imagescopy//diabetes (1).png"
+                          alt=""
+                        />
+                      </div>
+                    </a>
+                    <a href="consult-doctor.php">Diabetes</a>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="card card-img-a pt-2 pb-2">
+                    <a href="home-main-doctor1.php">
+                      <div>
+                        <img
+                          src="assets/imagescopy//red-blood-cells.png"
+                          alt=""
+                        />
+                      </div>
+                    </a>
+                    <a href="home-main-doctor1.php">Complete Blood Count</a>
+                  </div>
+                  <div class="card card-img-a pt-2 pb-2">
+                    <a href="home-main-doctor1.php">
+                      <a href="home-main-doctor1.php"></a>
+                      <div>
+                        <img
+                          src="assets/imagescopy//endocrine.png"
+                          alt="consult-doctor.php"
+                        />
+                      </div>
+                      <a href="home-main-doctor1.php">Thyroid Profile</a>
+                    </a>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="card card-img-a pt-2 pb-2">
+                    <a href="home-main-doctor1.php">
+                      <div>
+                        <img
+                          src="assets/imagescopy//pregnant.png"
+                          alt=""
+                        />
+                      </div>
+                      <a href="home-main-doctor1.php">Pregency</a>
+                    </a>
+                  </div>
+                  <div class="card card-img-a pt-2 pb-2">
+                    <a href="home-main-doctor1.php">
+                      <div>
+                        <img
+                          src="assets/imagescopy//heart (1).png"
+                          alt=""
+                        />
+                      </div>
+                      <a href="home-main-doctor1.php">Lipid Profile</a>
+                    </a>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="card card-img-a pt-2 pb-2">
+                    <a href="home-main-doctor1.php">
+                      <a href="home-main-doctor1.php"></a>
+                      <div>
+                        <img
+                          src="assets/imagescopy//kidney (1).png"
+                          alt=""
+                        />
+                      </div>
+                      <a href="home-main-doctor1.php">Kidney Function</a>
+                    </a>
+                  </div>
+                  <div class="card card-img-a pt-2 pb-2">
+                    <a href="home-main-doctor1.php">
+                      <div>
+                        <img
+                          src="assets/imagescopy//allergy.png"
+                          alt="consult-doctor.php"
+                        />
+                      </div>
+                    </a>
+                    <a href="home-main-doctor1.php">Allergies</a>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="card card-img-a pt-2 pb-2">
+                    <a href="home-main-doctor1.php">
+                      <div>
+                        <img
+                          src="assets/imagescopy//depression.png"
+                          alt=""
+                        />
+                      </div>
+                      <a href="home-main-doctor1.php">Depression</a>
+                    </a>
+                  </div>
+                  <div class="card card-img-a pt-2 pb-2">
+                    <a href="home-main-doctor1.php">
+                      <div>
+                        <img
+                          src="assets/imagescopy//hair.png"
+                          alt=""
+                        />
+                      </div>
+                      <a href="home-main-doctor1.php">Hair fall</a>
+                    </a>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="card card-img-a pt-2 pb-2">
+                    <a href="home-main-doctor1.php">
+                      <div>
+                        <img
+                          src="assets/imagescopy//hair.png"
+                          alt=""
+                        />
+                      </div>
+                      <a href="home-main-doctor1.php">Hair fall</a>
+                    </a>
+                  </div>
+                  <div class="card card-img-a pt-2 pb-2">
+                    <a href="home-main-doctor1.php">
+                      <a href="home-main-doctor1.php"></a>
+                      <div>
+                        <img
+                          src="assets/imagescopy//cough.png"
+                          alt=""
+                        />
+                      </div>
+                      <a href="home-main-doctor1.php">cough</a>
+                    </a>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="card card-img-a pt-2 pb-2">
+                    <a href="home-main-doctor1.php">
+                      <a href="home-main-doctor1.php"></a>
+                      <div>
+                        <img
+                          src="assets/imagescopy//cough.png"
+                          alt=""
+                        />
+                      </div>
+                      <a href="home-main-doctor1.php">cough</a>
+                    </a>
+                  </div>
+                  <div class="card card-img-a pt-2 pb-2">
+                    <a href="home-main-doctor1.php">
+                      <div>
+                        <img
+                          src="assets/imagescopy//puke.png"
+                          alt="consult-doctor.php"
+                        />
+                      </div>
+                      <a href="consult-doctor.php">Vomiting</a>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </section>
+  <!-- <section class="mt-2 mb-2">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="">
+            <h4 class="mb-4">Surgeries we provide</h4>
+            <div class="tabs a-clr-tab text-center">
+              <div class="tab">
+                <input type="radio" id="rd1" name="rd" />
+                <label class="tab-label" for="rd1">General Surgery</label>
+                <div class="tab-content">
+                  <div class="row">
+                    <div class="col-4 column-p">
+                      <a [routerLink]="['/labfrequently']">
+                        <div class="border-ri">
+                          <img
+                            src="assets/imagescopy/piles.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>
+                          <a [routerLink]="['/labfrequently']">Piles</a>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-4 column-p">
+                      <a [routerLink]="['/labfrequently']">
+                        <div class="border-ri">
+                          <img
+                            src="assets/imagescopy//hernia.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>
+                          <a [routerLink]="['/labfrequently']">Hernia</a>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-4 column-p">
+                      <a [routerLink]="['/labfrequently']">
+                        <div class="border-ri">
+                          <img
+                            src="assets/imagescopy//pregency1.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>
+                          <a [routerLink]="['/labfrequently']">Anal Fissure </a>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-4 column-p">
+                      <a [routerLink]="['/labfrequently']">
+                        <div class="border-ri">
+                          <img
+                            src="assets/imagescopy//stomach (1).png"
+                            alt=""
+                          />
+                        </div>
+                        <div>
+                          <a [routerLink]="['/labfrequently']">Gallstones</a>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-4 column-p">
+                      <a [routerLink]="['/labfrequently']">
+                        <div class="border-ri">
+                          <img
+                            src="assets/imagescopy//pregency1.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>
+                          <a [routerLink]="['/labfrequently']">Circumcision</a>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-4 column-p">
+                      <a [routerLink]="['/labfrequently']">
+                        <div class="border-ri">
+                          <img
+                            src="assets/imagescopy//kidney.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>
+                          <a [routerLink]="['/labfrequently']">Kidney Stones</a>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-4 column-p">
+                      <a [routerLink]="['/labfrequently']">
+                        <div class="border-ri">
+                          <img
+                            src="assets/imagescopy//pregency1.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>
+                          <a [routerLink]="['/labfrequently']"
+                            >Varicose Veins</a
+                          >
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-4 column-p">
+                      <a [routerLink]="['/labfrequently']">
+                        <div class="border-ri">
+                          <img
+                            src="assets/imagescopy//pregency1.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>
+                          <a [routerLink]="['/labfrequently']">Appendicitis</a>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-4 column-p">
+                      <a [routerLink]="['/labfrequently']">
+                        <div class="border-ri">
+                          <img
+                            src="assets/imagescopy//pregency1.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>
+                          <a [routerLink]="['/labfrequently']"
+                            >Lipoma Removal</a
+                          >
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-4 column-p">
+                      <a [routerLink]="['/labfrequently']">
+                        <div class="border-ri">
+                          <img
+                            src="assets/imagescopy//pregency1.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>
+                          <a [routerLink]="['/labfrequently']"
+                            >Pilonidal Sinus</a
+                          >
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-4 column-p">
+                      <a [routerLink]="['/labfrequently']">
+                        <div class="border-ri">
+                          <img
+                            src="assets/imagescopy//pregency1.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>
+                          <a [routerLink]="['/labfrequently']"
+                            >Varicose Veins</a
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab">
+                <input type="radio" id="rd2" name="rd" />
+                <label class="tab-label" for="rd2">Urology</label>
+                <div class="tab-content">
+                  <div class="row">
+                    <div class="col-4 column-p">
+                      <a [routerLink]="['/labfrequently']">
+                        <div class="border-ri">
+                          <img
+                            src="assets/imagescopy//pregency1.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>
+                          <a [routerLink]="['/labfrequently']">TURP</a>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-4 column-p">
+                      <a [routerLink]="['/labfrequently']">
+                        <div class="border-ri">
+                          <img
+                            src="assets/imagescopy//kidney.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>
+                          <a [routerLink]="['/labfrequently']">Kidney stone</a>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab">
+                <input type="radio" id="rd3" name="rd" />
+                <label class="tab-label" for="rd3">Gynecology</label>
+                <div class="tab-content">
+                  <div class="row">
+                    <div class="col-4 column-p">
+                      <a [routerLink]="['/labfrequently']">
+                        <div class="border-ri">
+                          <img
+                            src="assets/imagescopy//pregency1.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>
+                          <a [routerLink]="['/labfrequently']">Viginal cyst</a>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-4 column-p">
+                      <a [routerLink]="['/labfrequently']">
+                        <div class="border-ri">
+                          <img
+                            src="assets/imagescopy//pregency1.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>
+                          <a [routerLink]="['/labfrequently']">Hysterectomy</a>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-4 column-p">
+                      <a [routerLink]="['/labfrequently']">
+                        <div class="border-ri">
+                          <img
+                            src="assets/imagescopy//pregency1.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>
+                          <a [routerLink]="['/labfrequently']">Gynaecomastia</a>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-4 column-p">
+                      <a [routerLink]="['/labfrequently']">
+                        <div class="border-ri">
+                          <img
+                            src="assets/imagescopy//pregency1.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>
+                          <a [routerLink]="['/labfrequently']">Myomectomy</a>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-4 column-p">
+                      <a [routerLink]="['/labfrequently']">
+                        <div class="border-ri">
+                          <img
+                            src="assets/imagescopy//pregency1.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>
+                          <a [routerLink]="['/labfrequently']">Vaginoplasty</a>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-4 column-p">
+                      <a [routerLink]="['/labfrequently']">
+                        <div class="border-ri">
+                          <img
+                            src="assets/imagescopy//pregency1.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>
+                          <a [routerLink]="['/labfrequently']">Labiaplasty</a>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-4 column-p">
+                      <a [routerLink]="['/labfrequently']">
+                        <div class="border-ri">
+                          <img
+                            src="assets/imagescopy//pregency1.png"
+                            alt=""
+                          />
+                        </div>
+                      </a>
+                      <div>
+                        <a [routerLink]="['/labfrequently']">Ovarian cyst</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab">
+                <input type="radio" id="rd4" name="rd" />
+                <label class="tab-label" for="rd4">Ophthalmology</label>
+                <div class="tab-content">
+                  <div class="row">
+                    <div class="col-4 column-p">
+                      <a [routerLink]="['/labfrequently']">
+                        <div class="border-ri">
+                          <img
+                            src="assets/imagescopy//eye.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>
+                          <a [routerLink]="['/labfrequently']">Cataract</a>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-4 column-p">
+                      <a [routerLink]="['/labfrequently']">
+                        <div class="border-ri">
+                          <img
+                            src="assets/imagescopy//eye.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>
+                          <a [routerLink]="['/labfrequently']">Lasik</a>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-12">
+          <h4 class="mb-4">Happy Customers</h4>
+          <div
+            id="carouselExampleControls"
+            class="carousel slide"
+            data-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active bg-t1">
+                <p class="text-justify">
+                  <i class="fas fa-quote-left qutote-l"></i>Lorem ipsum dolor
+                  sit amet consectetur adipisicing elit. Odit rerum, facere
+                  beatae nulla ratione minima tenetur est, vitae accusantium
+                  labor recusandae sapiente, voluptates natus at dicta
+                  voluptatibus! Ad, quae omnis?
+
+                  <i class="fas fa-quote-right qutote-r"></i>
+                </p>
+                <h6 class="clr-h6">Jagadeesh</h6>
+              </div>
+              <div class="carousel-item bg-t2">
+                <p class="text-justify">
+                  <i class="fas fa-quote-left qutote-l"></i>Lorem ipsum dolor
+                  sit amet consectetur adipisicing elit. Odit rerum, facere
+                  beatae nulla ratione minima tenetur est, vitae accusantium
+                  labor recusandae sapiente, voluptates natus at dicta
+                  voluptatibus! Ad, quae omnia?<i
+                    class="fas fa-quote-right qutote-r"
+                  ></i>
+                </p>
+                <h6 class="clr-h6">Jagadeesh</h6>
+              </div>
+              <div class="carousel-item bg-t3">
+                <p class="text-justify">
+                  <i class="fas fa-quote-left qutote-l"></i>Lorem ipsum dolor
+                  sit amet consectetur adipisicing elit. Odit rerum, facere
+                  beatae nulla ratione minima tenetur est, vitae accusantium
+                  labor recusandae sapiente, voluptates natus at dicta
+                  voluptatibus! Ad, quae omnis?
+                </p>
+                <i class="fas fa-quote-right qutote-r"></i>
+                <h6 class="clr-h6">Jagadeesh</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <h4 class="mb-4 mt-4">Why Choose Us</h4>
+        <div class="why">
+          <div class="why-choose-card">
+            <img src="assets/imagescopy//home (4).png" alt="" />
+            <p>1500+ Tests</p>
+          </div>
+          <div class="why-choose-card">
+            <img src="assets/imagescopy//protection.png" alt="" />
+            <p>At-Home Service</p>
+          </div>
+          <div class="why-choose-card">
+            <img src="assets/imagescopy//hygiene.png" alt="" />
+            <p>Safe & Hygienic</p>
+          </div>
+          <div class="why-choose-card">
+            <img src="assets/imagescopy//report (1).png" alt="" />
+            <p>Online Reports</p>
+          </div>
+          <div class="why-choose-card">
+            <img src="assets/imagescopy//certified.png" alt="" />
+            <p>NABL Accredited Labs</p>
+          </div>
+          <div class="why-choose-card">
+            <img src="assets/imagescopy//24-hours (1).png" alt="" />
+            <p>Reports in 24-48hrs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+</section>

@@ -1,0 +1,95 @@
+<section class="padding-conson">
+  <div class="container-fluid">
+    <div class="row back-icon">
+      <div class="col-12 d-flex pt-2">
+        <a [routerLink]="['/Home']" class="d-flex align-items-center w-100">
+          <i class="fas fa-chevron-left"></i>
+          <p class="pl-2 pt-3">My Appointments</p>
+        </a>
+      </div>
+      <!-- <div class="col-12">
+                <p class="help-isssue">General Queries</p> 
+            </div> -->
+      <div class="col-md-12">
+        <h4>Upcoming Appointments</h4>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div
+        class="col-md-6 col-xs-6 col-sm-6 mt-4 mb-4 "
+        *ngFor="let appointmentdata of appointmentdata"
+      >
+        <div class="upcoming-appointment">
+          <div class="row">
+            <!-- <div class="col-2 text-center upcoming-call"> 
+                            <a class="mobilesOnly" href="tel:{{appointmentdata.appointment_doctornumber}}"> <i class="fa fa-phone"
+                                    aria-hidden="true"></i></a>
+                        </div> -->
+            <div class="col-6">
+              <div class="upcoming-c text-center">
+                <img class="pt-3" src="assets/imagescopy/gyna.jpg" alt="" />
+                <h6>Dr. {{ appointmentdata.appointment_doctorname }}</h6>
+                <p class="qualification-p">
+                
+                  {{ appointmentdata.appointment_doctordepartment }}
+                  
+                </p>
+             {{ appointmentdata.appointment_appointmentstatus }}
+                <!-- <h6>Dr. {{ appointmentdata.appointment_doctorname }}</h6>
+                <p class="qualification-p">
+                  MBBS,MD(DVL)
+                  {{ appointmentdata.appointment_doctordepartment }}
+                </p>
+                <p class="font-pdoctor">
+                  symptoms :{{ appointmentdata.Symptom }}
+                </p> -->
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="upcoming-c text-center pt-3">
+                
+                
+                <p class="" style="border: 0.5px solid #08256b ; font-size: 13px;">
+                  symptoms: {{ appointmentdata.Symptom }}
+                </p>
+                <h6>Date: {{ appointmentdata.appointment_appointmentdate }}</h6>
+                <h6>Slot-Time:{{ appointmentdata.aslot }}</h6>
+               <a [routerLink]="['/consultcall']">get call</a>
+              </div>
+            </div>
+            <!-- <div class="col-2 upcoming-chatss">
+                        
+                            <i class="fa fa-commenting" aria-hidden="true"></i>
+                        </div> -->
+            <div class="col-6 justify-upcoming pb-2">
+              <!-- <a [routerLink]="['/CancelAppointment']"> <button class="upcoming-cancel">Cancel Appointment </button></a> -->
+              <a
+                class="mobilesOnl"
+                href="tel:{{ appointmentdata.appointment_doctornumber }}"
+              >
+                <i class="fa fa-phone" aria-hidden="true"></i
+              ></a>
+              <a
+                class="mobilesOnl"
+                href="tel:{{ appointmentdata.appointment_doctornumber }}"
+              >
+              <i class="fa fa-commenting" aria-hidden="true"></i></a>
+              <!-- <a [routerLink]="['/appointmentDetails']"> <button class="upcoming-details">View Details
+                                </button></a> -->
+            </div>
+            <!-- <div class="col-6 justify-upcoming">
+              <i class="fa fa-commenting" aria-hidden="true"></i>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="alert alert-info" role="alert">
+        No More Appointments Found !
+      </div>
+      <!-- <p>No More Appointments!</p> -->
+    </div>
+  </div>
+</section>

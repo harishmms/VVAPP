@@ -1,0 +1,9 @@
+<input type="text" name="localPeerId" id="localPeerId" readonly /><br />
+<br />
+<br />
+<p>peer id: {{ peerId }}</p>
+<input type="text" name="remotePeerId" #remotePeerId id="remotePeerId" />
+<button (click)="getconn(remotePeerId.value)" id="btn-call">Call</button>
+<video id="localVideo"></video>
+<video id="remoteVideo"></video>
+

@@ -1,0 +1,184 @@
+<section>
+  <div class="header">
+    <ul class="ul-li d-flex">
+      <li>
+        <h4 class="header-name">Virtual Vaidya</h4>
+      </li>
+      <li>
+        <!-- <img src="assets/imagescopy/location.png" alt="" class="img-li pl-2 pt-2"> -->
+        <img  class="img-li pl-2 pt-2" src="assets/images/logo.png" />
+      </li>
+    </ul>
+  </div>
+  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" />
+  <label for="openSidebarMenu" class="sidebarIconToggle">
+    <div class="spinner diagonal part-1"></div>
+    <div class="spinner horizontal"></div>
+    <div class="spinner diagonal part-2"></div>
+  </label>
+  <div id="sidebarMenu">
+    <ul class="sidebarMenuInner">
+      <li class="paddingprofile d-flex">
+        <div>
+          <a [routerLink]="['/userpayments']">
+            <!-- <img src="assets/imagescopy/wallet.png" alt="" class="wallet"> -->
+            <img
+              src="https://img.icons8.com/ios-glyphs/20/0B1B67/wallet.png"
+              class="wallet"
+            />
+          </a>
+        </div>
+        <div class="m-4 text-center profile-img">
+          <!-- <img src="assets/imagescopy/user (1).png" alt="" class="img-side"> -->
+
+          <img class="propic" [src]="imageSrc" alt="">
+          <h6 color="clr-dj">{{ Userdata[0].user_name }}</h6>
+        </div>
+        <div class="align-e">
+          <a [routerLink]="['/userprofile']">
+            
+            <img
+              src="https://img.icons8.com/material/20/0B1B67/edit--v1.png"
+              class="wallet"
+            />
+          </a>
+        </div>
+      </li>
+      <div class="sticky-header-h">
+        <li>
+          <div class="d-flex align-items-center ">
+            <img src="https://img.icons8.com/material/20/0B1B67/home--v5.png" />
+            <a for="openSidebarMenu" [routerLink]="['/Home']"> Home</a>
+          </div>
+        </li>
+        <li>
+          <div class="d-flex align-items-center">
+            
+            <img
+              src="https://img.icons8.com/ios-filled/20/0B1B67/appointment-scheduling.png"
+            />
+            <a [routerLink]="['/appointments']"> My Appointments</a>
+          </div>
+        </li>
+
+        <li>
+          <div class="d-flex align-items-center">
+            <!-- <img src="assets/imagescopy/lab.png" alt="" class="imgh-toggle"> -->
+
+            <img
+              src="https://img.icons8.com/material/22/0B1B67/thin-test-tube--v1.png"
+            />
+            <a [routerLink]="['/MyHealthChechups']">Test Bookings</a>
+          </div>
+        </li>
+
+        <li>
+          <div class="d-flex align-items-center">
+            <!-- <img src="assets/imagescopy/doctor (2).png" alt="" class="imgh-toggle"> -->
+            <img
+              src="https://img.icons8.com/material/20/0B1B67/appointment-scheduling.png"
+            />
+            <a [routerLink]="['/OnlineConsultationSide']">
+              Online Consultations
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <div class="d-flex align-items-center">
+            <!-- <img src="assets/imagescopy/doctor.png" alt="" class="imgh-toggle"> -->
+            <img
+              src="https://img.icons8.com/ios-filled/20/0B1B67/doctor-giving-advice.png"
+            />
+
+            <a [routerLink]="['/mydoctors']"> My Doctors  </a>
+          </div>
+        </li>
+        <li>
+          <div class="d-flex align-items-center">
+            <!-- <img src="assets/imagescopy/doctor (2).png" alt="" class="imgh-toggle"> -->
+            <img
+              src="https://img.icons8.com/material/20/0B1B67/appointment-scheduling.png"
+            />
+            <a [routerLink]="['/Prescription']">
+              My Prescription
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <div class="d-flex align-items-center">
+            <!-- <img src="assets/imagescopy/medical-record.png" alt="" class="imgh-toggle"> -->
+            <img
+              src="https://img.icons8.com/material/20/0B1B67/document--v1.png"
+            />
+            <a [routerLink]="['/madicalrecords']"> Medical Records </a>
+          </div>
+        </li>
+
+        <li>
+          <div class="d-flex align-items-center">
+            <!-- <img src="assets/imagescopy/clock.png" alt="" class="imgh-toggle"> -->
+            <img
+              src="https://img.icons8.com/ios-glyphs/20/0B1B67/add-reminder.png"
+            />
+            <a [routerLink]="['/reminder']"> Reminders </a>
+          </div>
+        </li>
+
+        <li>
+          <div class="d-flex align-items-center">
+            <!-- <img src="assets/imagescopy/online-payment.png" alt="" class="imgh-toggle"> -->
+            <img
+              src="https://img.icons8.com/material-outlined/20/0B1B67/mobile-payment.png"
+            />
+            <a [routerLink]="['/userpayments']"> Payments </a>
+          </div>
+        </li>
+
+        <li>
+          <div class="d-flex align-items-center">
+            <!-- <img src="assets/imagescopy/question.png" alt="" class="imgh-toggle"> -->
+            <img src="https://img.icons8.com/material/20/0B1B67/help--v2.png" />
+            <a [routerLink]="['/help']"> Help Center </a>
+          </div>
+        </li>
+
+        <li>
+          <div class="d-flex align-items-center">
+            <!-- <img src="assets/imagescopy/settings.png" alt="" class="imgh-toggle"> -->
+            <img
+              src="https://img.icons8.com/ios-filled/20/0B1B67/settings.png"
+            />
+            <a [routerLink]="['/settings']"> Settings </a>
+          </div>
+        </li>
+        <li>
+          <div class="d-flex align-items-center">
+            <!-- <img src="assets/imagescopy/rating.png" alt="" class="imgh-toggle"> -->
+            <img
+              src="https://img.icons8.com/ios-glyphs/20/0B1B67/facebook-like--v1.png"
+            />
+            <a [routerLink]="['/appointments']"> Like us ? Give us 5 stars </a>
+          </div>
+        </li>
+        <li>
+          <div class="d-flex align-items-center">
+            <!-- <img src="assets/imagescopy/question-mark (2).png" alt="" class="imgh-toggle"> -->
+            <img
+              src="https://img.icons8.com/material/20/0B1B67/why-us-male.png"
+            />
+            <a [routerLink]="['/areyoudoctor']"> Are you a Doctor </a>
+          </div>
+        </li>
+        <li class="mb-4">
+          <div class="d-flex align-items-center" (click)="logout()">
+            <img src="https://img.icons8.com/fluency-systems-filled/20/0B1B67/exit.png"/>
+            Logout
+            <!-- <img src="https://img.icons8.com/ios-glyphs/20/0B1B67/exit.png"/> -->
+          </div>
+        </li>
+      </div>
+    </ul>
+  </div>
+</section>

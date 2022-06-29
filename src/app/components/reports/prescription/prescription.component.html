@@ -1,0 +1,57 @@
+<section class="padding-conson">
+  <div class="container-fluid">
+    <div class="row back-icon">
+      <div class="col-3 d-flex pt-2">
+        <a
+          [routerLink]="['/userrecords']"
+          class="d-flex align-items-center w-100"
+        >
+          <i class="fas fa-chevron-left"></i>
+          <p class="pl-2 pt-2">prescriptions</p>
+        </a>
+      </div>
+      <div class="col-9 d-flex pt-2"></div>
+    </div>
+    <div class="row">
+      <!-- <div class="col-md-12 Presc-r">
+        <p>Doctor has not Prescribed any medicines yes</p>
+      </div> -->
+      <div
+        class="col-md-6 col-xs-6 col-sm-6 mt-4 mb-4"
+        *ngFor="let Prescriptionlist of Prescriptionlist"
+      >
+        <div class="upcoming-appointment ">
+          <div class="row">
+          
+            <div class="col-6 ">
+              <div class="text-center pt-3 ">
+                <!-- <img class="pt-3" src="assets/imagescopy/gyna.jpg" alt="" /> -->
+                <p>Dr.{{ Prescriptionlist.prescription_doctorname }}</p>
+                
+                        
+              </div>
+            </div>
+            <div class="col-6">
+              <div class=" text-center pt-3">
+                   <p class="qualification-p" > <b> Date</b>: {{ Prescriptionlist.prescription_date }} </p>         
+                
+                
+                <!-- <h6>history:{{ Prescriptionlist.prescription_history }}</h6> -->
+              </div>
+            </div>  
+            <div class="col-12">
+              <div class=" pt-3">
+                <p class="qualification-p">   
+                  Pantient Name: {{ Prescriptionlist.prescription_patientname }}                 
+                </p>  
+                <h6> medication: {{ Prescriptionlist.prescription_medication }}</h6>    
+                <h6> Note : {{ Prescriptionlist.prescription_note }}</h6>
+                
+              </div>
+            </div>           
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

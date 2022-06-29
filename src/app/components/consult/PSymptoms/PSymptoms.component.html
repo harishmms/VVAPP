@@ -1,0 +1,297 @@
+<section class="padding-tbs">
+  <!-- //////////////Consult-now//////////// -->
+  <div class="container-fluid">
+    <div class="row back-icon">
+      <div class="col-6 d-flex pt-2">
+        <a [routerLink]="['/consultnow']" class="d-flex align-items-center w-100">
+          <i class="fas fa-chevron-left"> </i>
+          <p class="pt-3 pl-2">Back</p>
+        </a>
+      </div>
+      <!-- <div class="col-6">
+                <img src="Assets/images copy/propic.png" alt="">
+            </div> -->
+    </div>
+     </div>
+  <!-- ///////////////////////////////////// -->
+</section>
+<!-- ///////////////cards////////////////////// -->
+<section class="padding-bottomclas">
+  <div class="container-fluid scrool-issues">
+    
+    <div class="row mt-2 mb-2 most-select">
+      <div class="col-12 d-flex">
+        <h6>Most selected issues</h6>
+      </div>
+    </div>
+    <div class="row justify-content-around">
+      <div class="d-flex justify-content-around flex-wrap">
+        <div class="row-colp" *ngFor="let symptomslist of symptomslist ">
+          <div class="d-flex card-feaver">
+            <div class="img-divc">
+              <img src="{{symptomslist.symptom_image}}" alt="">
+              <!-- <img src="https://img.icons8.com/ios-glyphs/30/efefef/fever.png"/> -->
+              <!-- <img src="https://img.icons8.com/external-line-icons-vinzence-studio/20/efefef/external-coronavirus-coronavirus-disease-line-icons-vinzence-studio-4.png"/> -->
+            </div>
+            <div (click)="setsymptom(symptomslist.symptom_name)"> <p class="pl-2 pt-2">{{symptomslist.symptom_name}}</p>
+              <a [routerLink]="['/consult']">
+               
+              </a>
+            </div>
+            
+          </div>
+        </div>
+        <div class="row-colp">
+          <div class="d-flex card-feaver">
+            <div class="img-divc">
+              <img src="https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/64/undefined/external-more-multimedia-kiranshastry-gradient-kiranshastry.png"/>
+           
+            </div>
+            <div (click)="setsymptom('Others')"> <p class="pl-2 pt-2">Others</p>
+              <a [routerLink]="['/consult']">
+               
+              </a>
+            </div>
+            
+          </div>
+        </div>
+        
+        <!-- <div class="row-colp">
+          <div class="d-flex card-feaver">
+            <div class="img-divc">
+              <img src="assets/imagescopy/tired.png" alt="" />
+            </div>
+            <div>
+              <p class="pl-2 pt-2">Dark Circles</p>
+            </div>
+          </div>
+        </div>
+        <div class="row-colp">
+          <div class="d-flex card-feaver">
+            <div class="img-divc">
+              <img src="assets/imagescopy/acne.png" alt="" />
+            </div>
+            <div>
+              <p class="pl-2 pt-2">Acne</p>
+            </div>
+          </div>
+        </div>
+        <div class="row-colp">
+          <div class="d-flex card-feaver">
+            <div class="img-divc">
+              <img
+                src="https://img.icons8.com/fluency/48/000000/mushroom-cloud.png"
+              />
+            </div>
+            <div>
+              <p class="pl-2 pt-2">Loose motions</p>
+            </div>
+          </div>
+        </div>
+        <div class="row-colp">
+          <div class="d-flex card-feaver">
+            <div class="img-divc">
+              <img src="assets/imagescopy/nose.png" alt="" />
+            </div>
+            <div>
+              <p class="pl-2 pt-2">Blocked Nose</p>
+            </div>
+          </div>
+        </div>
+        <div class="row-colp">
+          <div class="d-flex card-feaver">
+            <div class="img-divc">
+              <img src="assets/imagescopy/heart.png" alt="" />
+            </div>
+            <div>
+              <p class="pl-2 pt-2">Heart burn</p>
+            </div>
+          </div>
+        </div>
+        <div class="row-colp">
+          <div class="d-flex card-feaver">
+            <div class="img-divc">
+              <img
+                src="assets/imagescopy/nose-bleeding.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <p class="pl-2 pt-2">Runny nose</p>
+            </div>
+          </div>
+        </div>
+        <div class="row-colp">
+          <div class="d-flex card-feaver">
+            <div class="img-divc">
+              <img src="assets/imagescopy/cough (1).png" alt="" />
+            </div>
+            <div>
+              <p class="pl-2 pt-2">Cough</p>
+            </div>
+          </div>
+        </div>
+        <div class="row-colp">
+          <div class="d-flex card-feaver">
+            <div class="img-divc">
+              <img
+                src="assets/imagescopy/skin-allergy.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <p class="pl-2 pt-2">Itching</p>
+            </div>
+          </div>
+        </div>
+        <div class="row-colp">
+          <div class="d-flex card-feaver">
+            <div class="img-divc">
+              <img
+                src="assets/imagescopy/hair-removal.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <p class="pl-2 pt-2">Hairfall</p>
+            </div>
+          </div>
+        </div>
+        <div class="row-colprow-colp row-colp">
+          <div class="d-flex card-feaver">
+            <div class="img-divc">
+              <img src="assets/imagescopy/stroke.png" alt="" />
+            </div>
+            <div>
+              <p class="pl-2 pt-2">Headache</p>
+            </div>
+          </div>
+        </div>
+        <div class="row-colp row-colp">
+          <div class="d-flex card-feaver">
+            <div class="img-divc">
+              <img src="assets/imagescopy/stomachache.png" alt="" />
+            </div>
+            <div>
+              <p class="pl-2 pt-2">Abdominal pain</p>
+            </div>
+          </div>
+        </div>
+        <div class="row-colp">
+          <div class="d-flex card-feaver">
+            <div class="img-divc">
+             
+              <img src="https://img.icons8.com/color/48/000000/vomiting.png" />
+            </div>
+            <div>
+              <p class="pl-2 pt-2">Vomiting</p>
+            </div>
+          </div>
+        </div>
+        <div class="row-colp row-colp">
+          <div class="d-flex card-feaver">
+            <div class="img-divc">
+              
+              <img
+                src="https://img.icons8.com/color/48/000000/checked-user-female-skin-type-7.png"
+              />
+            </div>
+            <div>
+              <p class="pl-2 pt-2">Spots on skin</p>
+            </div>
+          </div>
+        </div>
+        <div class="row-colp">
+          <div class="d-flex card-feaver">
+            <div class="img-divc">
+         
+              <img
+                src="https://img.icons8.com/external-wanicon-lineal-color-wanicon/64/000000/external-fat-healthy-wanicon-lineal-color-wanicon.png"
+              />
+            </div>
+            <div>
+              <p class="pl-2 pt-2">Obesity</p>
+            </div>
+          </div>
+        </div>
+        <div class="row-colp">
+          <div class="d-flex card-feaver">
+            <div class="img-divc">
+              
+              <img
+                src="https://img.icons8.com/external-fauzidea-outline-color-fauzidea/64/000000/external-throat-pandemic-fauzidea-outline-color-fauzidea.png"
+              />
+            </div>
+            <div>
+              <p class="pl-2 pt-2">Throat Pain</p>
+            </div>
+          </div>
+        </div>
+        <div class="row-colp">
+          <div class="d-flex card-feaver">
+            <div class="img-divc">
+              
+              <img
+                src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-dry-skin-skincare-flaticons-lineal-color-flat-icons.png"
+              />
+            </div>
+            <div>
+              <p class="pl-2 pt-2">Dry Skin</p>
+            </div>
+          </div>
+        </div>
+        <div class="row-colp">
+          <div class="d-flex card-feaver">
+            <div class="img-divc">
+              <img src="https://img.icons8.com/color/48/000000/ceshew.png" />
+            </div>
+            <div>
+              <p class="pl-2 pt-2">Rashes</p>
+            </div>
+          </div>
+        </div>
+        <div class="row-colp">
+          <div class="d-flex card-feaver">
+            <div class="img-divc">
+              <img
+                src="https://img.icons8.com/doodle/48/000000/gastrointestinal-tract.png"
+              />
+            </div>
+            <div>
+              <p class="pl-2 pt-2">Gas</p>
+            </div>
+          </div>
+        </div>
+        <div class="row-colp">
+          <div class="d-flex card-feaver">
+            <div class="img-divc">
+              
+              <img
+                src="https://img.icons8.com/bubbles/80/000000/sneezing-in-a-tissue.png"
+              />
+            </div>
+            <div>
+              <p class="pl-2 pt-2">Sneezing</p>
+            </div>
+          </div>
+        </div>
+        <div class="row-colp">
+          <div class="d-flex card-feaver">
+            <div class="img-divc">
+              <img
+                src="https://img.icons8.com/external-tal-revivo-fresh-tal-revivo/28/000000/external-erectile-dysfunction-viagra-tablet-isolated-on-a-white-background-fertility-fresh-tal-revivo.png"
+              />
+            </div>
+            <div>
+              <p class="pl-2 pt-2">Erectile Dysfunction</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  <!-- #region -->
+  </div>
+    </div>
+    </div>
+</section>
+<!-- ////////////////////////////////////////// -->

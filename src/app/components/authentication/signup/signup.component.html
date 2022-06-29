@@ -1,0 +1,65 @@
+<img class="w-100" src="assets/images/vv-quote.jpg" />
+<div class="container main mt-6 mb-4">
+    <div class="row justfy-row ">
+        <div class="col-md-10 ">
+            <div class="card card-sign">
+                <h4 class="login mt-2 mb-2">Sign-Up</h4>
+                <!-- <h1>{{val}}</h1> -->
+                <form [formGroup]="profileForm" (ngSubmit)="FormSubmit()">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 mt-2">
+                            <label>First Name</label>
+                            <input type="text" class="input-dob" formControlName="FirstName" >                      
+                        <span class="clr-r" style="color: #FB6725;"
+                        *ngIf="validate['FirstName'].touched && validate['FirstName'].errors?.['required']">*
+                        First name is required</span>
+                        </div>
+                        <div class="col-md-6 mt-2">
+                            <label>Last Name</label>
+                            <input type="text" class="input-dob" formControlName="LastName" >
+                        
+                        <span class="clr-r" style="color: #FB6725;"
+                        *ngIf="validate['LastName'].touched && validate['LastName'].errors?.['required']">*
+                        Last name is required</span>
+                        </div>
+                        <div class="col-md-6 mt-2">
+                            <label>Mobile</label>
+
+                            <div class="input-box">
+                                <span class="prefix">+91</span>
+                                <input class="input-style w-100 mb-0" name="num" id="num" formControlName="mobile" type="text"  mask="0000000000" readonly>
+                            </div>                        
+                        <span class="clr-r" style="color:#FB6725;"
+                        *ngIf="validate['mobile'].touched && validate['mobile'].errors?.['required'] "> Number required</span><span class="clr-r" style="color: red;"
+                        *ngIf="validate['mobile'].touched && validate['mobile'].errors?.['minlength'] ">invalid Number.</span>
+                        </div>
+                        <div class="col-md-6 mt-2">
+                            <label>Email</label>
+                            <input type="text" class="input-dob" formControlName="mail">                           
+                            <span class="clr-r" style="color:#FB6725;"
+                            *ngIf="validate['mail'].touched && validate['mail'].errors?.['required'] "> Gmail required</span><span class="clr-r" style="color: red;"
+                            *ngIf="validate['mail'].touched && validate['mail'].errors?.['email'] ">invalid Gmail.</span>
+                        </div>
+                        <div class="col-md-6 mt-2">
+                            <label>Password</label>
+                            <input type="text" class="input-dob" formControlName="Password">                           
+                            <span class="clr-r" style="color:#FB6725;"
+                            *ngIf="validate['Password'].touched && validate['Password'].errors?.['required'] "> Password required</span>
+                        </div>
+                        <div class="col-md-6 mt-2">
+                            <label for="">Date of birth</label>
+                            <input type="date" class="input-dob" formControlName="date">
+                               <span class="clr-r" style="color:#FB6725;"
+                            *ngIf="validate['date'].touched && validate['date'].errors?.['required'] "> Date required</span>
+                        </div>
+                          <div class="col-md-6">
+                            <a >
+                                <button class="button-continue button-log w-100 mt-2" [disabled]="!profileForm.valid">Continue</button>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> 

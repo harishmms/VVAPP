@@ -1,0 +1,87 @@
+<section class="padding-online bgclr ">
+    <div class="container-fluid mt-3">
+        <div class="row back-icon">
+            <div class="col-12 d-flex pt-2 justify-content-between">
+                <a [routerLink]="['/Home']" class="d-flex align-items-center w-100">
+                    <i class="fas fa-chevron-left"></i>
+                    <p class="pl-2 pt-3">Records</p>
+                </a>
+                <div class="position-record text-center">
+                    <a href="view-profile.php">
+                        <img class="pro-pic-record" src="assets/imagescopy/user (1).png" alt="">
+                        <p>Jagadeesh</p>
+                    </a>
+                </div>
+
+            </div>
+            <!-- <div class="col-12">
+                <p class="help-isssue">General Queries</p>
+
+            </div> -->
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <ul class="records">
+                    <li>
+
+                        <!-- <img src="assets/imagescopy/patient.png" alt=""> -->
+                        <img src="https://img.icons8.com/glyph-neue/64/0B2367/doctor-male.png"/>
+                        <a [routerLink]="['/mydoctors']"> My consultations
+                        </a>
+                    </li>
+                    <li>
+
+                        <!-- <img src="assets/imagescopy/prescription.png" alt=""> -->
+                        <img src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/64/0B2367/external-prescription-pet-care-icongeek26-glyph-icongeek26.png"/>
+                        <a [routerLink]="['/Prescription']"> prescriptions
+                        </a>
+                    </li>
+                    <li>
+
+                        <!-- <img src="assets/imagescopy/file.png" alt=""> -->
+                        <img src="https://img.icons8.com/ios/50/0B2367/report-card.png"/>
+                        <a [routerLink]="['/selfcheckreports']">Self-Check Report
+                        </a>
+                    </li>
+                    <li>
+
+                        <!-- <img src="assets/imagescopy/reminders.png" alt=""> -->
+                        <img src="https://img.icons8.com/ios-filled/64/0B2367/add-reminder.png"/>
+                        <a [routerLink]="['/ reminder']">Medicine Reminder
+                        </a>
+                    </li>
+                    <!-- <li>
+
+                        <img src="assets/imagescopy/microscope.png" alt="">
+                        <a href="lab-parameters.php">Lab Parameters
+                        </a>
+                    </li> -->
+                    <li>
+
+                        <!-- <img src="assets/imagescopy/patient.png" alt=""> -->
+                        <img src="https://img.icons8.com/pastel-glyph/64/0B2367/hand-with-a-pill.png"/>
+                        <a [routerLink]="['/madicalrecords']">Medical Records
+                        </a>
+                    </li>
+                    <li>
+
+                        <!-- <img src="assets/imagescopy/paper-clip.png" alt=""> -->
+                        <img src="https://img.icons8.com/ios-filled/64/0B2367/attach-resume-male.png"/>
+                        <a [routerLink]="['/Prescription']">Attachment and Reports
+                        </a>
+                    </li>
+                    <li>
+
+                        <!-- <img src="assets/imagescopy/content.png" alt=""> -->
+                        <img src="https://img.icons8.com/material/20/0B1B67/edit--v1.png" />
+                        <a [routerLink]="['/userprofile']">Edit Profile
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+
+</section>

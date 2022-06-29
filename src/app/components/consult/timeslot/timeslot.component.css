@@ -1,0 +1,9 @@
+.card-time-pm:hover{
+    background: #0E2060;
+    color: aliceblue; 
+}
+
+.card-time-pm p:hover{
+    color: aliceblue;
+
+}

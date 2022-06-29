@@ -1,0 +1,97 @@
+department imgs done
+symptom imgs done.
+
+doctor imgs DONE
+banner imgs done
+package imgs done
+
+
+symptom_name
+
+departments_createddate: "2022-01-31"
+departments_description: "Consult for fever, cough, through pain and more"
+departments_id: "1"
+departments_name: "General Physiciology"
+departments_status: "1"
+doctor_address: "ssaf"
+doctor_department: "1"
+doctor_email: "shafi@yahoo.in"
+doctor_fromtime: "11:10"
+doctor_id: "2"
+doctor_image: "20220131701882.jpg"
+doctor_knownlanguages: ""
+doctor_name: "shafi"
+doctor_onlineconsulting: "0"
+doctor_other: "MD"
+doctor_password: "123456"
+doctor_phone: "safas"
+doctor_profile: "fasf"
+doctor_status: "1"
+doctor_totime: "21:10"
+user_id: "1"
+user_mail: "tarun@gmail.com"
+user_name: "tarunupdated"
+user_number: "9247600985"
+
+http://virtualvaidya.com/WebApis/OnlineConsultations/test.php
+
+appointment_id 
+	2	appointment_patientid
+	3	appointment_patientname
+	4	appointment_patientnumber    
+	5	Symptom	int(11)	    
+	6	appointment_doctorid    
+	7	appointment_doctorname    
+	8	appointment_doctordepartment
+    9	appointment_doctornumber	
+    10	appointment_appointmentdate    
+	11	appointment_starttime	    
+	12	appointment_endtime    
+	13	appointment_remarks	text    
+	14	appointment_appointmentstatus    
+	15	appointment_sendsms	    
+	16	appointment_createddate
+appointment_appointmentdate: "0000-00-00"
+appointment_appointmentstatus: "0"
+appointment_createddate: "2022-05-24 11:28:14"
+appointment_doctordepartment: "General Physiciology"
+appointment_doctorid: "2"
+appointment_doctorname: "shafi"
+appointment_doctornumber: "9949849291"
+appointment_endtime: ""
+appointment_id: "2"
+appointment_patientid: "1"
+appointment_patientname: "tarunupdated"
+appointment_patientnumber: "9247600985"
+
+https://auth-db222.hostinger.com/index.php
+
+"<script>window.location.href='http://sms.osdigital.in/V2/http-api.php?apikey=Ve694r0XM34PUNAc&senderid=VVADYA&number=9247600985 &message= Thank you for choosing Virtual Vaidya. Your One - Time - Passcode is 628962 Please dont share this OTP with any one.&format=json';</script>"
+
+
+	fydermanpl@gmail.com
+	 *ngIf="menuaccess"
+	 
+	 
+	fydermanpl@gmail.com
+	MmsPvt@1
+	Loginbypassword
+
+	Login
+	Signup
+
+	enterOtp
+	in case user number gone or forget whats the issue solved
+	email and phone number only access at login only other wise readonly.
+	profile picture want to update in edit profile.
+	video call between patient and doctor must be a code generator and through the code only he can enter into meet with doctor.
+
+    name mobile gdr		mail_id age_of	ckeckup_date	checkup_name	checkup_desc test_desc	price	checkuppack_id	createddate	status.
+
+
+
+
+
+
+
+

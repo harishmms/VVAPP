@@ -1,0 +1,69 @@
+<section class="padding-conson">
+  <div class="container-fluid">
+    <div class="row back-icon">
+      <div class="d-flex pt-2">
+        <a
+          [routerLink]="['/consultnow']"
+          class="d-flex align-items-center w-100"
+        >
+          <i class="fas fa-chevron-left"></i>
+          <p class="pl-2 pt-3">Choose your Doctor</p>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <!-- <div class="col-12">
+                <div class="d-flex main-searchdoctor ">
+                    <i class="fas fa-search pl-2"></i>
+                    <input type="text" placeholder="search your location" class="pl-2">
+                </div>
+            </div> -->
+      <div class="col-12 mt-2">
+        <h6>Showing earliest available doctors</h6>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div
+        class="col-md-6 col-xs-6 col-sm-6 doctor-cardcon"
+        *ngFor="let data of doctorslist"
+      >
+        <div class="row">
+          <div class="col-5">
+            <div>
+              <img
+                src="{{ data.doctor_image}}"
+                alt=""
+                width="100%"
+                class="img-doctors"
+              />
+              <!-- <p class="experiance-button">11 years exp</p> -->
+            </div>
+          </div>
+          <div class="col-7">
+            <p hidden>{{ data.doctor_id }}</p>
+            <h6>Dr. {{ data.doctor_name }}</h6>
+            <p class="qualification-p">MBBS,MD(DVL){{ data.doctor_other }}</p>
+            <p class="qualification-p">{{ data.departments_name }}</p>
+            <p class="font-pdoctor">
+              <i class="fas fa-globe"></i> {{ data.doctor_knownlanguages }}
+            </p>
+            <p class="font-pdoctor"><del> $449</del> $250</p>
+          </div>
+          <div class="col-12 d-flex justify-content-between mt-21dob">
+            <button class="about-doctor" (click)="abtdoctor(data.doctor_id)">
+              About Doctor
+            </button>
+            <button
+              class="consult-nowb"
+              (click)="setconsultation(data.doctor_id)"
+            >
+              Consult now
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,67 @@
+ 
+<section class="padding-conson">
+    <div class="container-fluid">
+        <div class="row back-icon">
+            <div class=" d-flex pt-2">
+                <a [routerLink]="['/consult']"  class="d-flex align-items-center w-100">
+                    <i class="fas fa-chevron-left"></i>
+                    <p class="pt-3 pl-2"> About Doctor</p>
+                </a>
+            </div>
+            <!-- <div class="col-9 d-flex pt-2">
+              
+            </div> -->
+        </div>
+        <div class="row card-doctor-a" *ngFor="let doctorlist of doctorlist">
+ 
+            <div class="col-5 ">
+                <img src="{{ doctorlist.doctor_image}}" alt="" class="img-doctoras">
+            </div>
+            <div class="col-7 font-mb-p">
+                <!-- <h6>Dr. Yamuna singh</h6> -->
+                <h6>Dr.{{doctorlist.doctor_name}}</h6>
+                <p class="qualification-p">{{doctorlist.doctor_other}}</p>
+                <p class="qualification-p"> {{doctorlist.departments_name}}</p>
+                <p class="font-pdoctor"><i class="fas fa-globe globe-font"></i> {{doctorlist.doctor_knownlanguages}}</p>
+ 
+            </div>
+            <div class="col-12">
+                <p class="exp-px">11 years experience overall</p>
+            </div>
+            <div class="col-12 d-flex justify-icon-even">
+                <p><i class="fas fa-thumbs-up pl-2 okay-icon"></i> 100%</p>
+                <p><i class="fas fa-comment-alt pl-2 okay-icon"></i> 10 Patient Stories</p>
+            </div>
+ 
+        </div>
+        <div class="row mt-2 mb-2">
+            <div class="col-12">
+                <h6 class="pb-4 pt-4">Highly Recommended For</h6>
+                <div class="d-flex descrption-ph">
+                    <i class="far fa-heart pr-2"></i>
+                    <div>
+                        <h6>Doctor Friendliness</h6>
+                        <p>90% patients find the doctors friendly and approachable</p>
+                    </div>
+                </div>
+                <div class="d-flex descrption-ph">
+                    <i class="fas fa-info-circle pr-2"></i>
+                    <div>
+                        <h6>Detailed Treatment Explanation</h6>
+                        <p>90% patients find the doctors friendly and approachable</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 d-flex justify-content-between">
+                <button class="recomonded-button"><i class="fas fa-share-alt pr-2"></i> Recommend</button>
+                <button class="consult-nowb"><a [routerLink]="['/timeslot']"> Consult now </a></button>
+            </div>
+        </div>
+ 
+    </div>
+ 
+</section>
+ 
+

@@ -1,0 +1,12 @@
+.svg-inline--fa {
+    display: var(--fa-display,inline-block);
+    height: 2em ;
+    overflow: visible;
+    vertical-align: -0.125em;
+}
+ p{
+    font-size: small;
+}
+ /* .footerli:hover{
+    background-color: #a3b5f7;
+} */

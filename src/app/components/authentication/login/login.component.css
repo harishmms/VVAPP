@@ -1,0 +1,82 @@
+/* 
+.input-box {
+    display: flex;
+    align-items: center;
+    max-width: 300px;
+    background: #fff;
+    border: 1px solid #a0a0a0;
+    border-radius: 4px;
+    padding-left: 0.5rem;
+    overflow: hidden;
+    font-family: sans-serif;
+  }
+  
+  .input-box .prefix {
+    font-weight: 600;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+  }
+  
+  .input-box input {
+    flex-grow: 1;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    background: #fff;
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    font-weight: 600;
+  }
+  
+  .input-box:focus-within {
+    border-color: #777;
+  }
+  .ppp{
+    font-size: 0.8rem !important;
+  }
+  .topimg{
+    overflow-x: hidden;
+    overflow: hidden;
+    width: 250px !important;
+    height: 120px !important;
+    margin-top: 40px !important;
+    margin-bottom: 95px !important;
+  }
+  .bgcolor{
+    height: 100vh;
+    background-image: radial-gradient(circle, #002472, #002672, #012872, #022a71, #042c71, #042e75, #03307a, #03327e, #013487, #013591, #03379a, #0938a3);
+  }
+  .trm{
+    font-weight: 900;
+  } */
+
+
+  .input-box {
+    display: flex;
+    align-items: center;
+    max-width: 300px;
+    background: #fff;
+    border: 1px solid #A0A0A0;
+    border-radius: 4px;
+    padding-left: 0.5rem;
+    overflow: hidden;
+    font-family: sans-serif;
+  }
+  .input-box .prefix {
+    font-weight: 800;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+  }
+  .input-box input {
+    flex-grow: 1;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    background: #fff;
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    font-weight: 800;
+  }
+  .input-box:focus-within {
+    border-color: #777;
+  }

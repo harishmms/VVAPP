@@ -1,0 +1,141 @@
+<section class="padding-conson">
+  <div class="container-fluid">
+    <div class="row back-icon">
+      <div class="d-flex pt-2">
+        <a [routerLink]="['/consult']" class="d-flex align-items-center w-100">
+          <i class="fas fa-chevron-left"></i>
+          <p class="pt-3 pl-2">Appointment Details</p>
+        </a>
+      </div>
+    </div>
+    <div class="row pt-2 row-bg pb-2">
+      <div class="col-md-6">
+        <div class="d-flex" *ngFor="let doctorlist of doctorlist">
+          <img
+            src="{{ doctorlist.doctor_image }}"
+            alt=""
+            class="select-slot"
+          />
+          <div class="pl-2">
+            <h6>Dr.{{ doctorlist.doctor_name }}</h6>
+            <p class="fs-designation">{{ doctorlist.departments_name }}</p>
+            <p class="fs-designation">symptoms: {{symptoms }}</p>
+            <!-- <p class="fs-designation">Feez: {{doctorlist.feez }}</p> -->
+            <div class="d-flex justify-icon-even">
+              <p><i class="fas fa-thumbs-up pl-2 okay-icon"></i> 100%</p>
+              <p>
+                <i class="fas fa-comment-alt pl-2 okay-icon"></i> 10 Patient
+                Stories
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mt-2 mb-2">
+        <div class="d-flex in-time">
+          <i class="fas fa-house-user pr-2"></i>
+          <p class="mb-2 apppintment-c">Consult appointment time</p>
+        </div>
+        <div class="d-flex time-day">
+          <!-- <h6>Today, 1:30 PM</h6> -->
+          <h6>{{adate}}</h6>
+          <p>{{aslot}}</p>
+          <!-- <p>in 1 hour 46 minutes</p> -->
+        </div>
+        <!-- <p class="doctor-address">Amar Jyothi Nursing Home And PMP Medical Center,indiranagar</p> -->
+      </div>
+      <div class="col-md-6 p-feed">
+        <h6 class="pb-2 clr-black" id="bill-details">Bill Details</h6>
+        <div class="d-flex justify-content-between">
+          <p class="clr-fsa">Consultation Fee</p>
+          <p class="fs-13">&#8377; {{doctorFeez }}</p>
+        </div>
+        <div class="d-flex justify-content-between">
+          <p class="clr-fsa">Booking Fee</p>
+          <div class="d-flex">
+            <del class="pr-2 fs-13"> &#8377; 50</del>
+            <p class="free-clr">FREE</p>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between">
+          <p class="clr-fsa">Coupon  :</p>
+          <p class="fs-13">&#8377; {{scopunponcode.value }}</p>
+        </div>
+        <p class="we-ca">We care for you & Provide a free booking</p>
+        <div class="d-flex justify-content-between pt-2">
+          <h6>Total Payable</h6>
+          <p class="fs-13">&#8377; {{grandtotal}}</p>
+        </div>
+        <div class="border-offer mt-2 mb-2">
+          <p>You have saved &#8377; 50 on this appointment</p>
+          <select name="couponcode" #scopunponcode  (change)="getcopuondata(scopunponcode.value)">
+            <option value="">select Coupon</option>
+            <option *ngFor="let code of coupons" value="{{code.discount_amount}}">{{code.couponcode}}</option>
+            
+          </select>
+        </div>
+      </div>
+      <!-- <div class="col-md-6 mt-2 mb-2">
+                <h6>Choose a mode of payment</h6>
+                <div class="d-flex justify-content-between mt-2">
+                    <div class="d-flex">
+                        <input type="radio" name="pay" class="pr-4">
+                        <p class="mb-0  pl-4 doctor-address">Pay Online</p>
+                    </div>
+                    <p class="fs-13 mb-0">&#8377; 600</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex">
+                        <input type="radio" name="pay" class="">
+                        <p class="mb-0 pl-4 doctor-address">Pay At Clinic</p>
+                    </div>
+                    <p class="fs-13 mb-0 ">&#8377; 600</p>
+                </div>
+            </div> -->
+      <div class="col-md-6">
+        <div class="border-peel">
+          <div class="d-flex name-assure">
+            <i class="fas fa-check-circle pr-2"></i>
+            <h6>Virtual Vaidya Promise</h6>
+          </div>
+          <div class="padding-15-point">
+            <div class="d-flex">
+              <i class="fas fa-check pr-2 pt-2"></i>
+              <p class="doctor-address">
+                Appointment confirmed instantly with the doctor
+              </p>
+            </div>
+            <div class="d-flex">
+              <i class="fas fa-check pr-2 pt-2"></i>
+              <p class="doctor-address">
+                We assure web will Connect you to the doctors.If your
+                consultation does not happen for unforeseen reasons ,We will
+                give you 100% money back.
+              </p>
+            </div>
+            <div class="d-flex">
+              <i class="fas fa-check pr-2 pt-2"></i>
+              <p class="doctor-address">
+                24/7 live chat support to address all your Queries
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 d-flex justify-content-between mt-4 mb-2">
+        <div>
+          <p class="mb-0">600</p>
+          <p>Grand Total</p>
+        </div>
+        <button class="confirm-button" (click)="bookappointment()">
+          Confirm Appointment
+        </button>
+        <!-- <p>{{appointmentBooking.value | json}}</p> -->
+      </div>
+    </div>
+  </div>
+</section>

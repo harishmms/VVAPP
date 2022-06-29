@@ -1,0 +1,76 @@
+<section class="padding-conson">
+  <div class="container-fluid">
+    <div class="row back-icon">
+      <div class="col-12 d-flex pt-2">
+        <a [routerLink]="['/Home']" class="d-flex align-items-center w-100">
+          <i class="fas fa-chevron-left"></i>
+          <p class="pl-2 pt-3">My Health Chech-Up Orders.</p>
+        </a>
+      </div>
+      <!-- <div class="col-12">
+                <p class="help-isssue">General Queries</p>
+ 
+            </div> -->
+      <div class="col-md-12">
+        <h4>Upcoming Chech-Up`s</h4>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div
+        class="col-md-6 col-xs-6 col-sm-6 mt-4 mb-4 "
+        *ngFor="let orderlist of orderlist"
+      >
+        <div class="upcoming-appointment">
+          <div class="row">
+        
+            <div class="col-6">
+              <div class="">
+                
+                <h6>Name : {{ orderlist.name }}</h6>
+                <p class="qualification-p">
+                  age :{{ orderlist.age_of }}<br>
+                  Gender: {{ orderlist.gdr }}<br>
+                  created Date: {{ orderlist.createddate }}<br>
+                  Mail Id: {{ orderlist.mail_id }}
+                </p>
+                <!-- Gender: {{ orderlist.gdr }}<br> -->
+                 
+             
+                <!-- <h6>Dr. {{ orderlist.age_of }}</h6> -->
+               
+                
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="  pt-3">
+                
+       
+                <p class="pl-2" style="border: 0.5px solid #08256b ; font-size: 13px; ">
+                  {{ orderlist.checkup_name }}
+                </p>
+                <p class="font-pdoctor">  Date:{{ orderlist.ckeckup_date }} </p>          
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="upcoming-D text-center pt-3">
+                      
+                <p class="font-pdoctor">Test detiles :     {{ orderlist.checkup_desc }}.</p>    
+                <p class="float-right text-success">    price: {{ orderlist.price }} &#8377;</p>
+
+              </div>
+            </div>
+            
+           
+          </div>
+        </div>
+      </div>
+
+      <div class="alert alert-info" role="alert">
+        No More Appointments Found !
+      </div>
+
+    </div>
+  </div>
+</section>
