@@ -95,3 +95,4 @@ https://auth-db222.hostinger.com/index.php
 
 
 
+for app shell data (ng run paymenttest:app-shell:development).
