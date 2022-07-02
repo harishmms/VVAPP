@@ -53,6 +53,7 @@ import { LoginByPasswordComponent } from './components/authentication/LoginByPas
 import { PSymptomsComponent } from './components/consult/PSymptoms/PSymptoms.component';
 import { FormsModule } from '@angular/forms';
 import { MyHealthChechupsComponent } from './components/user/my-HealthChechups/my-HealthChechups.component';
+import { ConsultVideocallComponent } from './components/consult/consult-videocall/consult-videocall.component';
 // import { AuthService } from '../app/login/auth.service';
 
 
@@ -108,12 +109,7 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
          LoginByPasswordComponent,
          PSymptomsComponent,
          MyHealthChechupsComponent,
-         
-      
-         
-       
-         
-      
+         ConsultVideocallComponent,
   ],
   imports: [
     BrowserModule,

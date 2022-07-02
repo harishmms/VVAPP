@@ -42,8 +42,6 @@ import { MyHealthChechupsComponent } from './components/user/my-HealthChechups/m
 import { SirTempletComponent } from './components/home/sir-templet/sir-templet.component';
 import { ConsultVideocallComponent } from './components/consult/consult-videocall/consult-videocall.component';
 
-
-
 const routes: Routes = [
   // { path: '', component: MainComponent },
   { path: '',   redirectTo: '/Login', pathMatch: 'full' },

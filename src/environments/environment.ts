@@ -4,7 +4,6 @@
 
 export const environment = {
   production: false,
- 
   apiurl:'https://makersmind.in/vvadmin/WebApis/'
 };
 

@@ -1,6 +1,14 @@
-<input type="text" name="localPeerId" id="localPeerId" readonly /><br />
-<br />
-<br />
+<div class="container">
+    <div class="row pt-4  ">
+      <div class="col-12 pt-4 ">
+        <a [routerLink]="['/Home']" class="d-flex align-items-center w-100">
+          <i class="fas fa-chevron-left"> </i>
+          <p class="pl-2">Back</p>
+        </a>
+      </div>
+    </div>
+</div>
+      <!-- <input type="text" name="localPeerId" id="localPeerId" readonly /><br /> -->
 <p>peer id: {{ peerId }}</p>
 <input type="text" name="remotePeerId" #remotePeerId id="remotePeerId" />
 <button (click)="getconn(remotePeerId.value)" id="btn-call">Call</button>

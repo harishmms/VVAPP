@@ -2,10 +2,10 @@
   <!-- //////////////Consult-now//////////// -->
   <div class="container-fluid">
     <div class="row back-icon">
-      <div class="col-6 d-flex pt-2">
+      <div class="col-6 d-flex ">
         <a [routerLink]="['/Home']" class="d-flex align-items-center w-100">
           <i class="fas fa-chevron-left"> </i>
-          <p class="pt-3 pl-2">Back</p>
+          <p class=" pl-2">Back</p>
         </a>
       </div>
       <!-- <div class="col-6">
@@ -36,25 +36,18 @@
         <h6>Select By Departments</h6>
       </div>
       <div class="d-flex justify-content-around flex-wrap mt-4 pb-4">
-        <div class="row-colp " *ngFor="let user of departmentlist" (click)="getdid(user.departments_id)">
+        <div class="row-colp"*ngFor="let user of departmentlist"(click)="getdid(user.departments_id)">
           <div class="d-flex card-feaver">
-            <p class="d-none" >{{ user.departments_id }}.</p>
-
+            <p class="d-none">{{ user.departments_id }}.</p>
             <div class="img-divc">
-              <!-- <img src="assets/imagescopy/feaver.png" alt=""> -->
-              <img class="dimg w-100 h-100"
-                src="{{ user.departments_img }}"
-              />
+              <img class="dimg w-100 h-100" src="{{ user.departments_img }}" />
             </div>
             <div>
               <p class="pl-2 pt-2">{{ user.departments_name }}</p>
             </div>
           </div>
         </div>
-        
       </div>
     </div>
-   
   </div>
 </section>
-<!-- ////////////////////////////////////////// -->

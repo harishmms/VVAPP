@@ -1,0 +1,22 @@
+*{
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+}
+#remoteVideo{
+    border: 1px solid #3756f2;
+    width: 100vw;
+    height: 70vh;
+    /* padding: 40px; */
+   
+}
+
+#localVideo{
+    border: 1px solid #3756f2;
+    width:18vw;
+    position: absolute;
+    bottom: 18vh;
+    height: 18vw;
+    right: 0px;
+    /* padding: 40px; */
+}

@@ -1,8 +1,20 @@
 1.StaffDash Board: 
   login get by admin table  but values stored in more then three tables.
 
-2. admin =>appointment face =>patient tbl.
+2.admin =>appointment face =>patient tbl.
 
 3.lab dashboard.
 
 4.update dashboard.
+
+
+Application server keys are used to idenitfy your application server with a push service.
+
+Public Key
+
+BO0LCiM4CLUPvUkZ2odJHVSOxDk0YQf79KIjnkQUEc_rhJSaWybpe20f4eEvEjUV5irPSkxfaUC-mKt6qAD20og
+
+Private Key
+
+npoenCfnnF3bnxjdXCUgST7DYG9fgZcAIw0yjC1RBaA
+
