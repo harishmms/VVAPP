@@ -32,7 +32,7 @@
           <!-- <img src="assets/imagescopy/user (1).png" alt="" class="img-side"> -->
 
           <img class="propic" [src]="imageSrc" alt="">
-          <h6 color="clr-dj">{{ Userdata[0].user_name }}</h6>
+          <h6 color="clr-dj">{{ username }}</h6>
         </div>
         <div class="align-e">
           <a [routerLink]="['/userprofile']">
@@ -45,10 +45,13 @@
         </div>
       </li>
       <div class="sticky-header-h">
+
         <li>
-          <div class="d-flex align-items-center ">
+          
+          <div
+           class="d-flex align-items-center">
             <img src="https://img.icons8.com/material/20/0B1B67/home--v5.png" />
-            <a for="openSidebarMenu" [routerLink]="['/Home']"> Home</a>
+            <a for="openSidebarMenu" [routerLink]="['/Home']"> Home</a>  
           </div>
         </li>
         <li>
@@ -64,14 +67,12 @@
         <li>
           <div class="d-flex align-items-center">
             <!-- <img src="assets/imagescopy/lab.png" alt="" class="imgh-toggle"> -->
-
             <img
               src="https://img.icons8.com/material/22/0B1B67/thin-test-tube--v1.png"
             />
             <a [routerLink]="['/MyHealthChechups']">Test Bookings</a>
           </div>
         </li>
-
         <li>
           <div class="d-flex align-items-center">
             <!-- <img src="assets/imagescopy/doctor (2).png" alt="" class="imgh-toggle"> -->
@@ -83,14 +84,12 @@
             </a>
           </div>
         </li>
-
         <li>
           <div class="d-flex align-items-center">
             <!-- <img src="assets/imagescopy/doctor.png" alt="" class="imgh-toggle"> -->
             <img
               src="https://img.icons8.com/ios-filled/20/0B1B67/doctor-giving-advice.png"
             />
-
             <a [routerLink]="['/mydoctors']"> My Doctors  </a>
           </div>
         </li>

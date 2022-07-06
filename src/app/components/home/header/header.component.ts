@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
   UserId:any;
   decoded:any;
+  username:any;
   Userdata:any;
   fdata:any;
   imageSrc:any="https://img.icons8.com/ios-filled/35/0B1B67/contacts.png";
@@ -27,6 +28,7 @@ this.fdata=this.decoded.user_id
 
 this.mainservice.getUserApi().subscribe((res) => {
   this.Userdata=res.filter((res:any)=>res.user_id == `${this.fdata}`);
+  this.username=this.Userdata[0].user_name;
   let imgd=this.Userdata[0].propic_url;
   if(imgd!=""&& imgd!='undefined'&& imgd!=null && imgd!=undefined  ){
     this.imageSrc =this.Userdata[0].propic_url;

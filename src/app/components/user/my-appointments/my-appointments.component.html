@@ -27,16 +27,16 @@
                             <a class="mobilesOnly" href="tel:{{appointmentdata.appointment_doctornumber}}"> <i class="fa fa-phone"
                                     aria-hidden="true"></i></a>
                         </div> -->
-            <div class="col-6">
+            <div class="col-5">
               <div class="upcoming-c text-center">
-                <img class="pt-3" src="assets/imagescopy/gyna.jpg" alt="" />
-                <h6>Dr. {{ appointmentdata.appointment_doctorname }}</h6>
-                <p class="qualification-p">
+                <img class="" src="assets/imagescopy/do.jpg" alt="" />
+                <h6 class="doctor-qualify">Dr. {{ appointmentdata.appointment_doctorname }}</h6>
+                <p class="qualification-sub">
                 
                   {{ appointmentdata.appointment_doctordepartment }}
                   
                 </p>
-             {{ appointmentdata.appointment_appointmentstatus }}
+            
                 <!-- <h6>Dr. {{ appointmentdata.appointment_doctorname }}</h6>
                 <p class="qualification-p">
                   MBBS,MD(DVL)
@@ -47,24 +47,39 @@
                 </p> -->
               </div>
             </div>
-            <div class="col-6">
-              <div class="upcoming-c text-center pt-3">
+            <div class="col-7">
+              <div class="upcoming-c text-center">
+                <div class="d-flex justify-content-evenly">
+                  <ul class="ul-card">
+                    <li class="symp-span">Symptom :</li>
+                    <li class="symp-span">Date :</li>
+                    <li class="symp-span">Status :</li>
+                    <li class="symp-span">Slot :</li>
+                  </ul>
+                  <ul  class="ul-card">
+                    <li class="content-licard">{{ appointmentdata.Symptom }}</li>
+                    <li class="content-licard">{{ appointmentdata.appointment_appointmentdate }}</li>
+                    <li class="content-licard">{{ appointmentdata.appointment_appointmentstatus }}</li>
+                    <li class="content-licard">{{ appointmentdata.aslot }}</li>
+                  </ul>
+                </div>
                 
                 
-                <p class="" style="border: 0.5px solid #08256b ; font-size: 13px;">
-                  symptoms: {{ appointmentdata.Symptom }}
+                <!-- <p class="symp-p">
+                  <span class="symp-span">symptoms</span> : {{ appointmentdata.Symptom }}
                 </p>
-                <h6>Date: {{ appointmentdata.appointment_appointmentdate }}</h6>
-                <h6>Slot-Time:{{ appointmentdata.aslot }}</h6>
-               <a [routerLink]="['/consultcall']">get call</a>
+                <h6><span class="symp-span">Date :</span>{{ appointmentdata.appointment_appointmentdate }}</h6>
+                <h6><span class="symp-span">Slot-Time :</span>{{ appointmentdata.aslot }}</h6>
+                <p><span class="symp-span">Status :</span> {{ appointmentdata.appointment_appointmentstatus }}</p> -->
+               <span class="call-btn"><a [routerLink]="['/consultcall']" class="call-cnt"> Call</a></span>
               </div>
             </div>
             <!-- <div class="col-2 upcoming-chatss">
                         
                             <i class="fa fa-commenting" aria-hidden="true"></i>
                         </div> -->
-            <div class="col-6 justify-upcoming pb-2">
-              <!-- <a [routerLink]="['/CancelAppointment']"> <button class="upcoming-cancel">Cancel Appointment </button></a> -->
+            <!-- <div class="col-6 justify-upcoming pb-2">
+              <a [routerLink]="['/CancelAppointment']"> <button class="upcoming-cancel">Cancel Appointment </button></a>
               <a
                 class="mobilesOnl"
                 href="tel:{{ appointmentdata.appointment_doctornumber }}"
@@ -76,9 +91,9 @@
                 href="tel:{{ appointmentdata.appointment_doctornumber }}"
               >
               <i class="fa fa-commenting" aria-hidden="true"></i></a>
-              <!-- <a [routerLink]="['/appointmentDetails']"> <button class="upcoming-details">View Details
-                                </button></a> -->
-            </div>
+              <a [routerLink]="['/appointmentDetails']"> <button class="upcoming-details">View Details
+                                </button></a>
+            </div> -->
             <!-- <div class="col-6 justify-upcoming">
               <i class="fa fa-commenting" aria-hidden="true"></i>
             </div> -->

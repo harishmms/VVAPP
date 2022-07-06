@@ -10,6 +10,7 @@ export class MainComponent implements OnInit {
   UserId: any;
   decoded: any;
   Userdata: any;
+  username:any;
   fdata: any;
   baneer:any;
   constructor(private mainservice: MainserviceService) {
@@ -35,6 +36,7 @@ getusername()
 {
   this.mainservice.getUserApi().subscribe((res) => {
     this.Userdata = res.filter((res: any) => res.user_id == `${this.fdata}`);
+    this.username=this.Userdata[0].user_name;
     console.log("here is user data of fetching of Userdata", this.Userdata);
   });
 }

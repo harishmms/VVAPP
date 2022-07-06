@@ -1,3 +1,7 @@
+
+all cloudenry servie or not working and i con't access cloudinary account
+
+
 department imgs done
 symptom imgs done.
 
@@ -5,33 +9,8 @@ doctor imgs DONE
 banner imgs done
 package imgs done
 
-
 symptom_name
 
-departments_createddate: "2022-01-31"
-departments_description: "Consult for fever, cough, through pain and more"
-departments_id: "1"
-departments_name: "General Physiciology"
-departments_status: "1"
-doctor_address: "ssaf"
-doctor_department: "1"
-doctor_email: "shafi@yahoo.in"
-doctor_fromtime: "11:10"
-doctor_id: "2"
-doctor_image: "20220131701882.jpg"
-doctor_knownlanguages: ""
-doctor_name: "shafi"
-doctor_onlineconsulting: "0"
-doctor_other: "MD"
-doctor_password: "123456"
-doctor_phone: "safas"
-doctor_profile: "fasf"
-doctor_status: "1"
-doctor_totime: "21:10"
-user_id: "1"
-user_mail: "tarun@gmail.com"
-user_name: "tarunupdated"
-user_number: "9247600985"
 
 http://virtualvaidya.com/WebApis/OnlineConsultations/test.php
 
@@ -63,18 +42,11 @@ appointment_id: "2"
 appointment_patientid: "1"
 appointment_patientname: "tarunupdated"
 appointment_patientnumber: "9247600985"
-
 https://auth-db222.hostinger.com/index.php
-
 "<script>window.location.href='http://sms.osdigital.in/V2/http-api.php?apikey=Ve694r0XM34PUNAc&senderid=VVADYA&number=9247600985 &message= Thank you for choosing Virtual Vaidya. Your One - Time - Passcode is 628962 Please dont share this OTP with any one.&format=json';</script>"
-
-
-	fydermanpl@gmail.com
-	 *ngIf="menuaccess"
-	 
 	 
 	fydermanpl@gmail.com
-	MmsPvt@1
+	fydermanPL@3214
 	Loginbypassword
 
 	Login
@@ -85,14 +57,5 @@ https://auth-db222.hostinger.com/index.php
 	email and phone number only access at login only other wise readonly.
 	profile picture want to update in edit profile.
 	video call between patient and doctor must be a code generator and through the code only he can enter into meet with doctor.
-
-    name mobile gdr		mail_id age_of	ckeckup_date	checkup_name	checkup_desc test_desc	price	checkuppack_id	createddate	status.
-
-
-
-
-
-
-
 
 for app shell data (ng run paymenttest:app-shell:development).

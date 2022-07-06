@@ -27,8 +27,6 @@ export class MyAppointmentsComponent implements OnInit {
       this.appointmentdata=res.filter((res:any)=>res.appointment_patientid == `${this.fdata}`);
       console.log("test appointment id",this.appointmentdata);
       // this.apointmentlist=this.Userdata;
-      
-      
       return this.appointmentdata;
       });
     }
