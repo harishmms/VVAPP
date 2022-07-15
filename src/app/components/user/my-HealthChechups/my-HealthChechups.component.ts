@@ -14,7 +14,6 @@ fdata: any;
   constructor(private MyhealthcheckupsService: MyhealthcheckupsService) { 
     this.UserId=localStorage.getItem('TokenId');
   }
-
   ngOnInit() {
     this.decoded = jwt_decode(this.UserId);
     this.fdata=this.decoded.user_id;

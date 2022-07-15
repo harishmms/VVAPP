@@ -14,4 +14,7 @@ getUserApi(): Observable<any[]> {
 getbanner(): Observable<any[]>{
   return this.http.get<any[]>(`${environment.apiurl}Home/getBanners.php`);
 }
+getSymptoms(){
+  return this.http.get(`${environment.apiurl}OnlineConsultations/getSymptoms.php`);
+}
 }

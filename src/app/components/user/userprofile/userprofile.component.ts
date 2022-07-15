@@ -45,7 +45,6 @@ export class UserprofileComponent implements OnInit {
   fetchdata() {
     this.decoded = jwt_decode(this.UserId);
     console.log(this.decoded);
-
     console.log("this is new decoded jwt code", this.decoded);
     this.fdata = this.decoded.user_id;
     this.profileservice.getUserApi().subscribe((res) => {

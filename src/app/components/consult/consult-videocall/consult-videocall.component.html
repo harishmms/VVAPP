@@ -12,6 +12,10 @@
 <p>peer id: {{ peerId }}</p>
 <input type="text" name="remotePeerId" #remotePeerId id="remotePeerId" />
 <button (click)="getconn(remotePeerId.value)" id="btn-call">Call</button>
+<button (click)="mutes()">mute</button>
+    <button (click)="unmutes()">unmute</button>
+    
+    <button (click)="closes()">close</button>
 <video id="localVideo"></video>
 <video id="remoteVideo"></video>
 

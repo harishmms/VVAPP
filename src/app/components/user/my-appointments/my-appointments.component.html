@@ -7,9 +7,7 @@
           <p class="pl-2 pt-3">My Appointments</p>
         </a>
       </div>
-      <!-- <div class="col-12">
-                <p class="help-isssue">General Queries</p> 
-            </div> -->
+ 
       <div class="col-md-12">
         <h4>Upcoming Appointments</h4>
       </div>
@@ -23,10 +21,7 @@
       >
         <div class="upcoming-appointment">
           <div class="row">
-            <!-- <div class="col-2 text-center upcoming-call"> 
-                            <a class="mobilesOnly" href="tel:{{appointmentdata.appointment_doctornumber}}"> <i class="fa fa-phone"
-                                    aria-hidden="true"></i></a>
-                        </div> -->
+         
             <div class="col-5">
               <div class="upcoming-c text-center">
                 <img class="" src="assets/imagescopy/do.jpg" alt="" />
@@ -37,14 +32,7 @@
                   
                 </p>
             
-                <!-- <h6>Dr. {{ appointmentdata.appointment_doctorname }}</h6>
-                <p class="qualification-p">
-                  MBBS,MD(DVL)
-                  {{ appointmentdata.appointment_doctordepartment }}
-                </p>
-                <p class="font-pdoctor">
-                  symptoms :{{ appointmentdata.Symptom }}
-                </p> -->
+               
               </div>
             </div>
             <div class="col-7">
@@ -65,38 +53,10 @@
                 </div>
                 
                 
-                <!-- <p class="symp-p">
-                  <span class="symp-span">symptoms</span> : {{ appointmentdata.Symptom }}
-                </p>
-                <h6><span class="symp-span">Date :</span>{{ appointmentdata.appointment_appointmentdate }}</h6>
-                <h6><span class="symp-span">Slot-Time :</span>{{ appointmentdata.aslot }}</h6>
-                <p><span class="symp-span">Status :</span> {{ appointmentdata.appointment_appointmentstatus }}</p> -->
-               <span class="call-btn"><a [routerLink]="['/consultcall']" class="call-cnt"> Call</a></span>
+                   <span class="call-btn"><a [routerLink]="['/consultcall']" class="call-cnt"> Call</a></span>
               </div>
             </div>
-            <!-- <div class="col-2 upcoming-chatss">
-                        
-                            <i class="fa fa-commenting" aria-hidden="true"></i>
-                        </div> -->
-            <!-- <div class="col-6 justify-upcoming pb-2">
-              <a [routerLink]="['/CancelAppointment']"> <button class="upcoming-cancel">Cancel Appointment </button></a>
-              <a
-                class="mobilesOnl"
-                href="tel:{{ appointmentdata.appointment_doctornumber }}"
-              >
-                <i class="fa fa-phone" aria-hidden="true"></i
-              ></a>
-              <a
-                class="mobilesOnl"
-                href="tel:{{ appointmentdata.appointment_doctornumber }}"
-              >
-              <i class="fa fa-commenting" aria-hidden="true"></i></a>
-              <a [routerLink]="['/appointmentDetails']"> <button class="upcoming-details">View Details
-                                </button></a>
-            </div> -->
-            <!-- <div class="col-6 justify-upcoming">
-              <i class="fa fa-commenting" aria-hidden="true"></i>
-            </div> -->
+           
           </div>
         </div>
       </div>
@@ -104,7 +64,7 @@
       <div class="alert alert-info" role="alert">
         No More Appointments Found !
       </div>
-      <!-- <p>No More Appointments!</p> -->
+   
     </div>
   </div>
 </section>

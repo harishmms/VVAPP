@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Peer } from "peerjs";
+import { Router } from "@angular/router";
 @Component({
   selector: "app-consult-videocall",
   templateUrl: "./consult-videocall.component.html",
@@ -11,7 +12,7 @@ export class ConsultVideocallComponent implements OnInit {
   videoElement: any;
   localStream: any;
   remotevideo: any;
-  constructor() {
+  constructor(private Router:Router) {
     this.peer = new Peer();
   }
   ngOnInit() {
@@ -44,4 +45,35 @@ export class ConsultVideocallComponent implements OnInit {
       this.remotevideo.onloadedmetadata = () => this.remotevideo.play();
     });
   }
+  mutes() {
+    console.log("mute");
+    navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+      .then((stream) => {
+        this.localStream = stream;
+        const videoElement = document.getElementById("localVideo");
+        const remoteVideo = document.getElementById("remoteVideo");
+        this.videoElement.srcObject = this.localStream;
+        this.videoElement.onloadedmetadata = () => this.videoElement.play();
+      });
+  }
+  unmutes() {
+    console.log("mute");
+    navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+      .then((stream) => {
+       this.localStream = stream;
+        const videoElement = document.getElementById("localVideo");
+        const remoteVideo = document.getElementById("remoteVideo");
+        this.videoElement.srcObject = this.localStream;
+        this.videoElement.onloadedmetadata = () => this.videoElement.play();
+      });
+  }
+
+  closes() {
+    if (confirm("do you want end the meet")) {
+      console.log("bye bye");
+      // window.location.href = "tata.php"
+      this.Router.navigateByUrl('Home');
+    }
+  }
+
 }

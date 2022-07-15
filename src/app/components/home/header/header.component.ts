@@ -23,7 +23,7 @@ this.UserId=localStorage.removeItem('TokenId');
 }
   ngOnInit() {
     this.decoded = jwt_decode( this.UserId);
-console.log("this is new decoded jwt code",this.decoded);
+// console.log("this is new decoded jwt code",this.decoded);
 this.fdata=this.decoded.user_id
 
 this.mainservice.getUserApi().subscribe((res) => {
@@ -35,7 +35,7 @@ this.mainservice.getUserApi().subscribe((res) => {
   }else{
     this.imageSrc="https://img.icons8.com/ios-filled/35/0B1B67/contacts.png";
   }
-  console.log("here is user data of fetching",this.Userdata);
+  // console.log("here is user data of fetching",this.Userdata);
 });
   }
 

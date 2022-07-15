@@ -46,19 +46,19 @@ this.pmobile=localStorage.getItem('MobileId',);
    if(this.profileForm.valid)
    {
      this.SignupService.signupApi(this.profileForm.value).subscribe((res:any)=>{
-       console.log(res);
+      //  console.log(res);
        this.router.navigateByUrl('/Home');
      });
    } 
 
-    console.warn(this.profileForm.value);
+    // console.warn(this.profileForm.value);
     
   }
   val:any;
 
   ngOnInit(): void {
    this.val=this.OtpService.fun();
-   console.log(this.pmobile);
+  //  console.log(this.pmobile);
    this.profileForm.patchValue({
     mobile:this.pmobile
   });

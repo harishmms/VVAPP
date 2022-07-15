@@ -44,49 +44,13 @@
                     </div>
                   </div>
               </div>
-              <!-- <div class="carousel-item">
-                <div class="col-md-6 d-flex align-items-center justify-content-between card-mainh mb-2">
-                <div class="">
-                  <h4 class="d-flex">
-                    <span class="pl-2"> Care</span>
-                  </h4>
-                  <P>Surgaries</P>
-                  <h6>You are safe in hands</h6>
-                  <p>Choose the expert in end to end</p>
-             
-                </div>
-                <div>
-                  <img src="assets/imagescopy/do.jpg" alt="" class="img-doctor"/>
-                </div>
-              </div>
-              </div> -->
+              
          
             </div>
           </div>
          
          
-        <!-- <div class="col-md-6 d-flex align-items-center justify-content-between card-mainh mb-2">
-          <div class="">
-            <h4 class="d-flex">
-              <span class="pl-2"> Care</span>
-            </h4>
-            <P>Surgaries</P>
-            <h6>You are safe in hands</h6>
-            <p>Choose the expert in end to end</p>
-            <div class="pt-2">
-              <a [routerLink]="['/knowmore']">
-                <button class="button-know">Know more</button>
-              </a>
-            </div>
-          </div>
-          <div>
-            <img
-              src="assets/imagescopy/do.jpg"
-              alt=""
-              class="img-doctor"
-            />
-          </div>
-        </div> -->
+        
 
         <div class="col-md-6 pb-2">
           <h4 class="">Our Offerings</h4>
@@ -151,6 +115,32 @@
             <a [routerLink]="['/covidhome']"> <button>Search</button></a>
           </div>
           <!-- ////////slider/////////////// -->
+          <!-- <div class="d-flex justify-content-around flex-wrap">
+            <div class="row-colp" *ngFor="let symptomslist of symptomsdata ">
+              <div class="d-flex card-feaver">
+                <div class="img-divc">
+                  <img src="{{symptomslist.symptom_image}}" alt="">
+                </div>
+                <div (click)="setsymptom(symptomslist.symptom_name)"> <p class="pl-2 pt-2">{{symptomslist.symptom_name}}</p>
+                  <a [routerLink]="['/consult']">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="row-colp">
+              <div class="d-flex card-feaver">
+                <div class="img-divc">
+                  <img src="https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/64/undefined/external-more-multimedia-kiranshastry-gradient-kiranshastry.png"/>
+                </div>
+                <div (click)="setsymptom('Others')"> <p class="pl-2 pt-2">Others</p>
+                  <a [routerLink]="['/consult']">
+                   </a>
+                </div>
+              </div>
+            </div>
+            
+ 
+      </div> -->
           <div class="container-fluid d-flex flex-wrap">
             <div class="row">
               <div class="col">

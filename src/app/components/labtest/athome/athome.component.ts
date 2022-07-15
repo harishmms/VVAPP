@@ -18,7 +18,7 @@ export class AthomeComponent implements OnInit {
 
     this.athome.getHealtpacks().subscribe((res: any) => {
       this.Healtpacks=res;
-      console.log(this.Healtpacks);
+      // console.log(this.Healtpacks);
       
       return this.Healtpacks;
     });

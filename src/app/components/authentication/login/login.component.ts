@@ -30,7 +30,7 @@ resdata:any={};
     this.login.OtpApi(num).subscribe((res: any) => {
       this.resdata.status=res.status;
       this.resdata.massage=res.message;
-      console.log(res.status);
+      // console.log(res.status);
       let status="n";
      status=  this.resdata.status;
     

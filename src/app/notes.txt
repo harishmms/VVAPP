@@ -1,5 +1,4 @@
 
-all cloudenry servie or not working and i con't access cloudinary account
 
 
 department imgs done

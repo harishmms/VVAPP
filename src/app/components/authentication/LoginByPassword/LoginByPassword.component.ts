@@ -25,8 +25,8 @@ export class LoginByPasswordComponent implements OnInit {
   FormSubmit() {
     if (this.profileForm.valid) {
       this.loginservice.PostloginApi(this.profileForm.value).subscribe((res: any) => {
-        console.log(res)
-      console.log(this.profileForm.value);
+        // console.log(res);
+      // console.log(this.profileForm.value);
       localStorage.removeItem('TokenId');
       localStorage.setItem('TokenId',res.JwtToken);
       this.TokenId= localStorage.getItem('TokenId');
@@ -44,7 +44,7 @@ export class LoginByPasswordComponent implements OnInit {
       }
       
       else {
-        console.log(this.profileForm.value)
+        // console.log(this.profileForm.value)
       }
   }
 

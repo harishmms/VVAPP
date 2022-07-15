@@ -114,9 +114,9 @@ export class BookappointmentComponent implements OnInit {
   getcopuondata( data:any){
 console.log(data);
 this.grandtotal=Number( this.doctorFeez);
-console.log(this.grandtotal);
+// console.log(this.grandtotal);
 this.grandtotal=this.grandtotal- data;
-console.log(this.grandtotal);
+// console.log(this.grandtotal);
 this.appointmentBooking.controls["Feez"].setValue(this.grandtotal);
   }
 }
