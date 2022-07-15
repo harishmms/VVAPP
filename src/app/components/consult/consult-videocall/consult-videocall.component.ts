@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Peer } from "peerjs";
 import { Router } from "@angular/router";
+
 @Component({
   selector: "app-consult-videocall",
   templateUrl: "./consult-videocall.component.html",
@@ -67,7 +68,14 @@ export class ConsultVideocallComponent implements OnInit {
         this.videoElement.onloadedmetadata = () => this.videoElement.play();
       });
   }
-
+   off () {//toggle state
+   this.localStream.getAudioTracks()[0].enabled = !this.localStream.getAudioTracks()[0].enabled;
+  }
+   multioffv() {
+    // this.localStream.getVideoTracks().forEach(track => track.enabled = !track.enabled);
+    this.localStream.getVideoTracks()[0].enabled = !this.localStream.getVideoTracks()[0].enabled;
+    console.log("on ");
+  }
   closes() {
     if (confirm("do you want end the meet")) {
       console.log("bye bye");
